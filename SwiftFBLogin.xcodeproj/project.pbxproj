@@ -13,6 +13,7 @@
 		2BFB1AF81A52D6CE00B6CD15 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BFB1AF71A52D6CE00B6CD15 /* Images.xcassets */; };
 		2BFB1AFB1A52D6CE00B6CD15 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BFB1AF91A52D6CE00B6CD15 /* LaunchScreen.xib */; };
 		2BFB1B071A52D6CE00B6CD15 /* SwiftFBLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFB1B061A52D6CE00B6CD15 /* SwiftFBLoginTests.swift */; };
+		2BFB1B111A52D6F000B6CD15 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFB1B101A52D6F000B6CD15 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		2BFB1B001A52D6CE00B6CD15 /* SwiftFBLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftFBLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFB1B051A52D6CE00B6CD15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BFB1B061A52D6CE00B6CD15 /* SwiftFBLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFBLoginTests.swift; sourceTree = "<group>"; };
+		2BFB1B101A52D6F000B6CD15 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		2BFB1B121A52D74F00B6CD15 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BFB1B111A52D6F000B6CD15 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 		2BFB1AE21A52D6CE00B6CD15 = {
 			isa = PBXGroup;
 			children = (
+				2BFB1B101A52D6F000B6CD15 /* FacebookSDK.framework */,
 				2BFB1AED1A52D6CE00B6CD15 /* SwiftFBLogin */,
 				2BFB1B031A52D6CE00B6CD15 /* SwiftFBLoginTests */,
 				2BFB1AEC1A52D6CE00B6CD15 /* Products */,
@@ -83,6 +88,7 @@
 				2BFB1AF71A52D6CE00B6CD15 /* Images.xcassets */,
 				2BFB1AF91A52D6CE00B6CD15 /* LaunchScreen.xib */,
 				2BFB1AEE1A52D6CE00B6CD15 /* Supporting Files */,
+				2BFB1B121A52D74F00B6CD15 /* Bridge-Header.h */,
 			);
 			path = SwiftFBLogin;
 			sourceTree = "<group>";
@@ -336,9 +342,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SwiftFBLogin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftFBLogin/Bridge-Header.h";
 			};
 			name = Debug;
 		};
@@ -346,9 +357,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SwiftFBLogin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftFBLogin/Bridge-Header.h";
 			};
 			name = Release;
 		};
