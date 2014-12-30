@@ -29,7 +29,6 @@ class ViewController: UIViewController, FBLoginViewDelegate {
     func loginViewFetchedUserInfo(loginView: FBLoginView!, user: FBGraphUser!) {
         println("Username: \(user.name)")
         self.profilePictureView.profileID = user.objectID
-        
     }
     
     func loginViewShowingLoggedOutUser(loginView: FBLoginView!) {
